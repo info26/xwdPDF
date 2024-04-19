@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "FedraSerif";
+    src: url("./FedraSerifLVariable.woff2") format("woff");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font: 14pt "Calibri";
+    font-variant-ligatures: common-ligatures;
+
+    --dpi: 96px;
+    --numwidth: 20%;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.admarker {
+    margin-left: var(--numwidth);
+}
+
+.page {
+    width: 8.5in;
+    min-height: 11in;
+    padding: 0.3in;
+    margin: 1cm auto;
+    border: 1px #000 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+}
+
+@page {
+    --dpi: 96px;
+    size: calc(var(--dpi) * 8.5) calc(var(--dpi) * 11); /* 8.5 x 11 at 300 dpi */
+    margin: 0px;
+}
+
+
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+
+
+/* .clueDiv */
+
+.clueNum {
+    width: var(--numwidth);
+    display: inline-block;
+    text-align: right;
+    padding-right: 5%;
+    float: left;
+}
+
+.clue {
+    width: calc(100% - var(--numwidth));
+    word-break: break-word;
+    display: inline-block   ;
+}
+
+.grid-cell {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    font-family: "myriad-pro";
+}
+
+.nospace {
+    font-size: 0px;
+}
+
+.nospace > * {
+    font-size: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 1px solid #555;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+.grid-number {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 1;
+}
